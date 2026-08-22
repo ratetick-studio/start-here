@@ -1,0 +1,49 @@
+name: Join request
+description: Ask for access to a RateTick Studio programme
+title: "Join request"
+labels: ["join-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Anyone on the internet can read it, and search
+        engines will index it.
+
+        Please do not add your name, location, employer, email address or any
+        other personal detail — not here, and not in follow-up comments. We do
+        not need any of it to invite you, and everything after the invitation
+        happens in private.
+
+        Your GitHub username is recorded automatically as the author of this
+        issue. That is the only thing we need.
+
+  - type: dropdown
+    id: cohort
+    attributes:
+      label: Which cohort are you interested in?
+      options:
+        - August 2026
+        - A later cohort — please keep me in mind
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Before you submit
+      options:
+        - label: I understand this issue is public and contains no personal information.
+          required: true
+        - label: I can read and modify Python, and I know the basics of Git and GitHub.
+          required: true
+
+  - type: textarea
+    id: anything_else
+    attributes:
+      label: Anything you'd like us to know (optional)
+      description: >-
+        Optional, and public. Keep it to your interest in the programme or a
+        question about it. Do not include personal details.
+      placeholder: e.g. what you're hoping to get out of the programme
+    validations:
+      required: false
